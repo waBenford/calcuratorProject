@@ -6,6 +6,10 @@ public class Process {
 	//Override
 	public void input(int num) {
 		this.currentNum = num;
+		currentNum = num;
+		if(totalResult == 0 && currentOp.equals("+")) {
+			totalResult = currentNum;
+		}
 	}
 
 	//Override
