@@ -9,13 +9,20 @@ public class Calculator {
 		UiDisplay.display();
 		
 		Process process = new Process();
-		String inp = "";
-		while( !inp.equals( "=" ) ) {
-			inp = getValue.nextLine();
-			process.opelate();
-			
-			if ( !inp.equals( "=" ) ) {
-				process.input( inp );
+		int num;
+		String sing = "";
+		while( !sing.equals( "=" ) ) {
+			if( getValue.hasNextInt() ) {
+				num = getValue.nextInt();
+				process.input( num );
+				process.operate();
+			}else {
+				sing = getValue.next();
+				
+				if( !sing.equals( "=" ) ) {
+					process.input( sing );
+					process.operate();
+				}
 			}
 		}
 		
