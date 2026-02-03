@@ -16,22 +16,26 @@ public class Calculator {
 		Process process = new Process();
 		int num;
 		String sing = "";
+		
+		System.out.println("Enter number");
 		while( !sing.equals( "=" ) ) {
 			if( getValue.hasNextInt() ) {
 				num = getValue.nextInt();
+				
 				process.input( num );
-				display.operate();
+				process.operate();
+				display.operate(process);
 			}else {
 				sing = getValue.next();
 				
 				if( !sing.equals( "=" ) ) {
 					process.input( sing );
-					display.operate();
+					display.operate(process);
 				}
 			}
 		}
 		
-		display.total();
+		display.total(process);
 	}
 
 }
