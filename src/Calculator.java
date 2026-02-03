@@ -5,6 +5,8 @@ public class Calculator {
 	public static void main(String[] args) {
 		Scanner getValue = new Scanner( System.in );
 		
+		Display display = new Display();
+		
 		Ui UiDisplay = new Ui();
 		UiDisplay.display();
 		
@@ -15,18 +17,17 @@ public class Calculator {
 			if( getValue.hasNextInt() ) {
 				num = getValue.nextInt();
 				process.input( num );
-				process.operate();
+				display.operate();
 			}else {
 				sing = getValue.next();
 				
 				if( !sing.equals( "=" ) ) {
 					process.input( sing );
-					process.operate();
+					display.operate();
 				}
 			}
 		}
 		
-		Display display = new Display();
 		display.total();
 	}
 
