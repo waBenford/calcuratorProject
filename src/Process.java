@@ -12,8 +12,8 @@ public class Process {
 	}
 
 	//Override
-	public void input(String sing) {
-		this.currentOp = sing;
+	public void input(String sign) {
+		this.currentOp = sign;
 	}
 
 	public void operate() {

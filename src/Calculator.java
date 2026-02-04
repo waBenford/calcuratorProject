@@ -15,10 +15,10 @@ public class Calculator {
 		//object
 		Process process = new Process();
 		int num;
-		String sing = "";
+		String sign = "";
 		
 		System.out.println("Enter number");
-		while( !sing.equals( "=" ) ) {
+		while( !sign.equals( "=" ) ) {
 			if( getValue.hasNextInt() ) {
 				num = getValue.nextInt();
 				
@@ -26,10 +26,10 @@ public class Calculator {
 				process.operate();
 				display.operate(process);
 			}else {
-				sing = getValue.next();
+				sign = getValue.next();
 				
-				if( !sing.equals( "=" ) ) {
-					process.input( sing );
+				if( !sign.equals( "=" ) ) {
+					process.input( sign );
 					display.operate(process);
 				}
 			}
