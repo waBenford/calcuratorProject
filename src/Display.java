@@ -7,7 +7,7 @@ public class Display {
 
     // แสดงผลลัพธ์สุดท้าย
     public void total( Process process ) {
-        System.out.println("=========================");
+        System.out.println("test");
         System.out.println("ผลลัพธ์สุดท้าย " + process.getFinalResult());
         System.out.println("=========================");
     }
