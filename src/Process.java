@@ -20,6 +20,8 @@ public class Process {
 			case "+" : totalResult += currentNum; break;
 	
 			case "-" : totalResult -= currentNum; break;
+
+			case "*" : totalResult *= currentNum; break;
 	
 			case "%" : totalResult %= currentNum; break;
 			
