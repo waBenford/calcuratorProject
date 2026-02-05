@@ -2,7 +2,6 @@ public class Process {
 	private double totalResult = 0;
 	private double currentNum = 0;
 	private String currentOp = "+";
-	private boolean isFirstInput = true;
 	
 	public String getCurrentOp() { return currentOp; }
 
@@ -17,24 +16,14 @@ public class Process {
 	}
 
 	public void operate() {
-		if( isFirstInput ) {
-			totalResult = currentNum;
-			isFirstInput = false;
-		}else {
-			switch(currentOp) {
-				case "+" : totalResult += currentNum; break;
+		switch(currentOp) {
+			case "+" : totalResult += currentNum; break;
 	
-				case "-" : totalResult -= currentNum; break;
+			case "-" : totalResult -= currentNum; break;
 	
-				case "*" : totalResult *= currentNum; break;
-	
-				case "/" : 
-				    if(currentNum != 0) totalResult /= currentNum;
-					else System.out.println("Error! : cannot divide by zero.");
-					break;
-			    case "%" : totalResult %= currentNum; break;
-			}
+			case "%" : totalResult %= currentNum; break;
 		}
+		
 		currentNum = 0;
 	}
 
